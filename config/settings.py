@@ -126,3 +126,10 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# Auth & Login Redirects
+LOGIN_URL = 'login'              # Vista de login cuando se acceda a rutas privadas sin sesión
+LOGIN_REDIRECT_URL = 'home'      # Vista a la que redirige tras iniciar sesión con éxito
+LOGOUT_REDIRECT_URL = 'home'     # Vista a la que redirige tras cerrar sesión
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
